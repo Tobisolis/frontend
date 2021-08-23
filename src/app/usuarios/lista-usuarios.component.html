@@ -1,0 +1,25 @@
+Se mostrarn los datos cuando exista laconexion a la bd
+<!--p>lista-usuarios works!</p
+{{ users | json }}>-->
+
+    <!--main class="mx-auto">
+            <table class="table  mt-5">
+                <thead class="table-dark ">
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Celular</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Actions</th>
+                    <th scope="col">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let u of users">
+                    <td>{{u.nombre}}</td>
+                    <td>{{u.celular}}</td>
+                    <td>{{u.correo}}</td>
+                    <td><button class="btn btn-outline-primary" routerLink="/update/{{u.id}}"><li class="far fa-edit">Editar</li></button></td>
+                    <td><button class="btn btn-outline-danger" (click)="borrar(u.id)"><li class="far fa-trash-alt"></li></button></td>
+                </tr>
+            </table>
+    </main--->

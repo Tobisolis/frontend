@@ -27,7 +27,8 @@ import { ListarAsociacionComponent } from './asociacion/listar-asociacion/listar
     LoginComponentComponent,
     NuevaAsociacionComponent,
     EditarAsociacionComponent,
-    ListarAsociacionComponent 
+    ListarAsociacionComponent ,
+    
 
     
   ],

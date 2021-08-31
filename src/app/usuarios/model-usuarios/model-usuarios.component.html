@@ -1,0 +1,28 @@
+<mat-form-field appearance="fill">
+    <mat-label>Nombre </mat-label>
+    <input matInput placeholder="Nombre asociacion o labor" [(ngModel)]="user.nombre">
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Telefon</mat-label>
+    <input matInput placeholder="Posibiliad de asenso" [(ngModel)]="user.celular">
+  </mat-form-field>
+
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Correo</mat-label>
+    <input matInput placeholder="Posibiliad de asenso" [(ngModel)]="user.correo">
+  </mat-form-field>
+
+
+  <mat-form-field appearance="fill">
+    <mat-label>{{user.trabajo.nombre}}</mat-label>
+    <mat-select matInput placeholder="S[[elecione pais" [(ngModel)]="user.trabajo">
+    <mat-option *ngFor="let t of work" [value]="t">
+        {{t.nombre}}
+    </mat-option>
+  </mat-select>
+  </mat-form-field>
+
+  <button mat-button color="btn btn-success" (click)="ok()">Aceptar</button>
+  <button mat-button color="primary" (click)="cancel()">Cancel</button>

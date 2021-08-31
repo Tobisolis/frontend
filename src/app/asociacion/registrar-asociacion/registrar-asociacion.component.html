@@ -1,0 +1,29 @@
+
+<div class="center">
+    <section class="container mt-5 float-left p-3">
+
+        <form  [formGroup]="Add"  (ngSubmit)="AddT()">
+            <div class="mb-3 p-1 ">
+                <label for="a" class="form-label">Asociacion laboral</label>
+                <input type="text" formControlName="a"   name="a"class="form-control" id="a" placeholder="nombre asociacion laboral..." >
+            </div>
+            <small *ngIf="Add.get('a')?.invalid && Add.get('a')?.touched" id="a" class="text-danger">El titulo es requerido</small>
+
+            <div class="mb-3 p-1" >
+                <label for="a" class="form-label">Posibildad de asender</label>
+                <input type="text"  formControlName="p"  class="form-control" id="p" placeholder="posibildad de asender..." >
+            </div>
+            <small *ngIf="Add.get('p')?.invalid && Add.get('p')?.touched" id="p" class="text-danger">El titulo es requerido</small>
+            <div class="mb-3 ">
+            <button type="submit" class="btn btn-success" width="50%" >Guardar</button>
+            <a type="submit" class="btn btn-dark m-4" width="50%" routerLink="/" >Cancelar</a>
+            
+            </div>
+          
+
+            
+
+        </form>
+
+    </section>
+</div>

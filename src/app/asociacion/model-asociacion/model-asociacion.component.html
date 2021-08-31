@@ -1,0 +1,12 @@
+<mat-form-field appearance="fill">
+    <mat-label>Nombre asociacion</mat-label>
+    <input matInput placeholder="Nombre asociacion o labor" [(ngModel)]="trabajo.nombre">
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Posibiliad de asenso</mat-label>
+    <input matInput placeholder="Posibiliad de asenso" [(ngModel)]="trabajo.asenso">
+  </mat-form-field>
+
+  <button mat-button color="btn btn-success" (click)="ok()">Aceptar</button>
+  <button mat-button color="primary" (click)="cancel()">Cancel</button>

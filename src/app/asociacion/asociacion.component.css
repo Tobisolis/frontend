@@ -29,3 +29,18 @@ a{
     color: white;
     margin-left: 25px;
 }
+
+
+
+.navegar {
+
+    background: #198754;
+}
+
+
+.navegar form{
+
+    margin-left: 40%;
+    padding: 10px;
+    background: #198754;
+}

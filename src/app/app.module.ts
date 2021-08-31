@@ -3,32 +3,44 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DetallesUsuariosComponent } from './usuarios/detalles-usuarios.component';
-import { NuevoUsuariosComponent } from './usuarios/nuevo-usuarios.component';
-import { EditarUsuariosComponent } from './usuarios/editar-usuarios.component';
-import { ListaUsuariosComponent } from './usuarios/lista-usuarios.component';
-import { LoginComponentComponent} from './login/login-component.component'
+
+import { UsuariosComponent } from './usuarios/usuarios.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { NuevaAsociacionComponent } from './asociacion/nueva-asociacion/nueva-asociacion.component';
-import { EditarAsociacionComponent } from './asociacion/editar-asociacion/editar-asociacion.component';
-import { ListarAsociacionComponent } from './asociacion/listar-asociacion/listar-asociacion.component';
+import {MatTableModule} from '@angular/material/table';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
+import { AsociacionComponent } from './asociacion/asociacion.component';
+import { ConfirmDialogComponent } from './asociacion/dialogo/confirm-dialog/confirm-dialog.component';
+import { ModelAsociacionComponent } from './asociacion/model-asociacion/model-asociacion.component';
+
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { RegistrarAsociacionComponent } from './asociacion/registrar-asociacion/registrar-asociacion.component';
+import { ModelUsuariosComponent } from './usuarios/model-usuarios/model-usuarios.component';
+import { DialogUsuariosComponent } from './usuarios/dialog-usuarios/dialog-usuarios.component';
+import { RegistrarUsuariosComponent } from './usuarios/registrar-usuarios/registrar-usuarios.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DetallesUsuariosComponent,
-    NuevoUsuariosComponent,
-    EditarUsuariosComponent,
-    ListaUsuariosComponent,
-    LoginComponentComponent,
-    NuevaAsociacionComponent,
-    EditarAsociacionComponent,
-    ListarAsociacionComponent ,
+    UsuariosComponent,
+    AsociacionComponent,
+    ConfirmDialogComponent,
+    ModelAsociacionComponent,
+    RegistrarAsociacionComponent,
+    ModelUsuariosComponent,
+    DialogUsuariosComponent,
+    RegistrarUsuariosComponent,
     
+
+   
 
     
   ],
@@ -38,7 +50,14 @@ import { ListarAsociacionComponent } from './asociacion/listar-asociacion/listar
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatDialogModule,
+    FormsModule,
+    MatInputModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

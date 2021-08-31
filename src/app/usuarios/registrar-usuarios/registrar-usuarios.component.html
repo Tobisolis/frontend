@@ -1,0 +1,42 @@
+
+<div class="center">
+    <section class="container mt-5 float-left p-3">
+
+        <form  [formGroup]="Agg"  (ngSubmit)="AddU()">
+            <div class="mb-3 p-1 ">
+                <label for="nombreu" class="form-label">Nombre usuario</label>
+                <input type="text" formControlName="nombreu"   name="nombreu"class="form-control" id="nombreu" placeholder="nombre usuario..." >
+            </div>
+            <small *ngIf="Agg.get('nombreu')?.invalid && Agg.get('nombreu')?.touched" id="nombreu" class="text-danger">El titulo es requerido</small>
+
+            <div class="mb-3 p-1" >
+                <label for="cell" class="form-label">Celular</label>
+                <input type="number"  formControlName="cell"  class="form-control" id="cell" placeholder="Numero celular..." >
+            </div>
+            <small *ngIf="Agg.get('cell')?.invalid && Agg.get('cell')?.touched" id="cell" class="text-danger">El titulo es requerido</small>
+
+            <div class="mb-3 p-1" >
+                <label for="correo" class="form-label">Correo</label>
+                <input type="text"  formControlName="correo"  class="form-control" id="correo" placeholder="Emaiñ@.com..." >
+            </div>
+            <small *ngIf="Agg.get('correo')?.invalid && Agg.get('correo')?.touched" id="correo" class="text-danger">El titulo es requerido</small>
+            
+            <div class="mb-3 p-1" >
+                <label for="codigo" class="form-label">Codigo empleo</label>
+                <input type="number"  formControlName="codigo"  class="form-control" id="codigo" placeholder="Numero celular..." >
+            </div>
+            <small *ngIf="Agg.get('codigo')?.invalid && Agg.get('codigo')?.touched" id="codigo" class="text-danger">El titulo es requerido</small>
+            
+            <div class="mb-3 ">
+            <button type="submit" class="btn btn-success" width="50%" >Guardar</button>
+            <a type="submit" class="btn btn-dark m-4" width="50%" routerLink="/" >Cancelar</a>
+            
+            </div>
+          
+
+            
+
+        </form>
+
+    </section>
+</div>

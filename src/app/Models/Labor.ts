@@ -1,8 +1,8 @@
 export class Labor {
 
-    private id:number=0;
-    private nombre:string="";
-    private asenso:string="";
+     id:number=0;
+     nombre:string="";
+     asenso:string="";
       
     public Labor(id:number, nombre:string,asenso:string) {
         

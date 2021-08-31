@@ -1,0 +1,72 @@
+<div class="navegar">
+    <form class="d-flex" [formGroup]="filtro"  (ngSubmit)="filtrar()">
+      <input class="form-control me-2" formControlName="dato" type="search"   placeholder="Buscar por nombre" aria-label="Search">
+      <button class="btn btn-secondary" type="submit" >Buscar</button>
+    </form>
+    <small *ngIf="filtro.get('p')?.invalid && filtro.get('p')?.touched" id="p" class="text-danger">El titulo es requerido</small>
+
+</div>
+    
+    
+<!-- <div>
+  <mat-form-field>
+  <Input matInput (keyup)="filtrar($event.target.value)">
+  </mat-form-field>
+</div> -->
+
+<main class="wor">
+      
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="width: 100%;">
+      
+         
+          <ng-container matColumnDef="Id" >
+          <th mat-header-cell *matHeaderCellDef> Id </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+          </ng-container>
+      
+         
+          <ng-container matColumnDef="Nombre">
+          <th mat-header-cell *matHeaderCellDef> Nombre usuario </th>
+          <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Celular">
+          <th mat-header-cell *matHeaderCellDef> Celular </th>
+          <td mat-cell *matCellDef="let element"> {{element.celular}} </td>
+          </ng-container>
+
+          
+          <ng-container matColumnDef="Correo">
+              <th mat-header-cell *matHeaderCellDef>Correo</th>
+              <td mat-cell *matCellDef="let element">{{element.correo}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="Labor">
+                <th mat-header-cell *matHeaderCellDef> Labor</th>
+                <td mat-cell *matCellDef="let element">{{element.trabajo.nombre}}</td>
+         </ng-container>    
+
+         <ng-container matColumnDef="Editar">
+            <th mat-header-cell *matHeaderCellDef> Editar</th>
+            <td mat-cell *matCellDef="let element"> 
+                <button class="btn btn-success" (click)="onModal(element)" >update</button>  
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Eliminar">
+            <th mat-header-cell *matHeaderCellDef> Eliminar</th>
+            <td mat-cell *matCellDef="let element"> 
+                <button class="btn btn-danger" (click)="onDelete(element.id)">eliminar</button>  
+            </td>
+        </ng-container>
+      
+      
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      
+
+      </table> 
+
+  </main>
+
+  <!--(click)="onModal(element)-->

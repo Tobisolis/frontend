@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import { Observable } from 'rxjs';
 import { Usuarios } from '../Models/usuarios';
 
@@ -8,7 +9,7 @@ import { Usuarios } from '../Models/usuarios';
 })
 export class ServiciosService {
 
-  
+      updateUsuarios = new Subject<Usuarios[]>();  
 
       urlUsers = 'http://localhost:9000/usuarios/';
 

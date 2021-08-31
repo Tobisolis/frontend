@@ -8,7 +8,7 @@ export class Usuarios {
   correo:string="";
   trabajo:Labor =new Labor;    
     
-	public Usuario(id:number,nombre:string, celular:number, correo:string, trabajo:Labor) {
+	public Usuarios(id:number,nombre:string, celular:number, correo:string, trabajo:Labor) {
 	    this.id=id;
 		this.nombre = nombre;
 		this.celular = celular;
